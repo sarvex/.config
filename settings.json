@@ -1,10 +1,4 @@
 {
-  "[javascript]": {
-    "prettier.arrowParens": "avoid"
-  },
-  "[typscript]": {
-    "prettier.arrowParens": "avoid"
-  },
   "cSpell.userWords": [
     "deque",
     "Errorf",
