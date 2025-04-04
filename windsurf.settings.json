@@ -24,6 +24,7 @@
   "editor.foldingMaximumRegions": 9999,
   "editor.fontFamily": "'CaskaydiaCove Nerd Font', 'Cascadia Code', 'CascadiaCode', 'Cascadia Code PL', 'CascadiaCodePL', 'MesloLGMDZ Nerd Font', Menlo, Monaco, Consolas,  'Courier New', monospace",
   "editor.fontLigatures": "'zero', 'onum', 'liga', 'clig', 'dlig', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09', 'ss10', 'ss11', 'ss12', 'ss13', 'ss14', 'ss15', 'ss16', 'ss17', 'ss18', 'ss19', 'ss20'",
+  "editor.fontSize": 13,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.guides.bracketPairs": true,
@@ -133,13 +134,31 @@
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 1000,
   "files.eol": "\n",
+  "files.exclude": {
+    "**/.trunk/*actions/": true,
+    "**/.trunk/*logs/": true,
+    "**/.trunk/*notifications/": true,
+    "**/.trunk/*out/": true,
+    "**/.trunk/*plugins/": true
+  },
   "files.insertFinalNewline": true,
   "files.simpleDialog.enable": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
-  "git.autoStash": true,
+  "files.watcherExclude": {
+    "**/.trunk/*actions/": true,
+    "**/.trunk/*logs/": true,
+    "**/.trunk/*notifications/": true,
+    "**/.trunk/*out/": true,
+    "**/.trunk/*plugins/": true
+  },
   "git.autofetch": true,
-  "git.branchRandomName.dictionary": ["adjectives", "animals", "colors"],
+  "git.autoStash": true,
+  "git.branchRandomName.dictionary": [
+    "adjectives",
+    "animals",
+    "colors"
+  ],
   "git.branchRandomName.enable": true,
   "git.confirmSync": false,
   "git.detectSubmodulesLimit": 32,
@@ -163,7 +182,11 @@
   "peacock.showColorInStatusBar": false,
   "peacock.surpriseMeOnStartup": true,
   "prettier.bracketSameLine": true,
-  "prettier.documentSelectors": ["**/*.astro", "**/*.vue", "**/*.svelte"],
+  "prettier.documentSelectors": [
+    "**/*.astro",
+    "**/*.vue",
+    "**/*.svelte"
+  ],
   "prettier.jsxSingleQuote": true,
   "prettier.prettierPath": "~/Library/pnpm/global/5/node_modules/prettier",
   "prettier.printWidth": 120,
@@ -185,8 +208,8 @@
   "snyk.advanced.cliPath": "/Users/sarvex/Library/Application Support/snyk/vscode-cli/snyk-macos-arm64",
   "snyk.folderConfigs": [
     {
-      "folderPath": "/Users/sarvex/Sources/rust-leetcode",
       "baseBranch": "main",
+      "folderPath": "/Users/sarvex/Sources/rust-leetcode",
       "localBranches": [
         "main"
       ]
@@ -224,7 +247,7 @@
       "serverUrl": "http://localhost:9000"
     }
   ],
-  "sonarlint.ls.javaHome": "/Library/Java/JavaVirtualMachines/openjdk.jdk/Contents/Home",
+  "sonarlint.disableTelemetry": true,
   "telemetry.telemetryLevel": "off",
   "terminal.integrated.allowMnemonics": true,
   "terminal.integrated.cursorBlinking": true,
@@ -237,11 +260,11 @@
   "terminal.integrated.minimumContrastRatio": 7,
   "terminal.integrated.scrollback": 99999,
   "terminal.integrated.shellIntegration.history": 999,
-  "terminal.integrated.tabStopWidth": 2,
   "terminal.integrated.tabs.defaultColor": "terminal.ansiCyan",
   "terminal.integrated.tabs.showActions": "always",
   "terminal.integrated.tabs.showActiveTerminal": "always",
   "terminal.integrated.tabs.title": "${sequence}",
+  "terminal.integrated.tabStopWidth": 2,
   "typescript.inlayHints.enumMemberValues.enabled": true,
   "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
   "typescript.inlayHints.parameterNames.enabled": "all",
@@ -252,18 +275,8 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
   "window.density.editorTabHeight": "compact",
   "window.restoreFullscreen": true,
-  "windsurf.autoExecutionPolicy": "auto",
-  "windsurf.autocompleteSpeed": "default",
-  "windsurf.cascadeWebSearchDisabled": false,
-  "windsurf.chatFontSize": "default",
-  "windsurf.enableConfig": {
-    "*": true
-  },
-  "windsurf.explainAndFixInCurrentConversation": true,
-  "windsurf.openRecentConversation": true,
-  "windsurf.rememberLastModelSelection": true,
   "workbench.activityBar.location": "top",
-  "workbench.colorTheme": "Tokyo Night Storm",
+  "workbench.colorTheme": "SynthWave84",
   "workbench.commandPalette.experimental.suggestCommands": true,
   "workbench.commandPalette.history": 16,
   "workbench.editor.defaultBinaryEditor": "hexEditor.hexedit",
