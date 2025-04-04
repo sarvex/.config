@@ -205,35 +205,6 @@
   "search.smartCase": true,
   "search.useGlobalIgnoreFiles": true,
   "search.useParentIgnoreFiles": true,
-  "snyk.advanced.cliPath": "/Users/sarvex/Library/Application Support/snyk/vscode-cli/snyk-macos-arm64",
-  "snyk.folderConfigs": [
-    {
-      "baseBranch": "main",
-      "folderPath": "/Users/sarvex/Sources/rust-leetcode",
-      "localBranches": [
-        "main"
-      ]
-    }
-  ],
-  "snyk.trustedFolders": [
-    "/Users/sarvex/Sources/i2-bridge",
-    "/Users/sarvex/Sources/bridge",
-    "/Users/sarvex/Sources/socifi-oasis-multi-v2",
-    "/Users/sarvex/Sources/smart-contracts",
-    "/Users/sarvex/Sources/ethereum-smart-contract-go-solidity",
-    "/Users/sarvex/Sources/ride-sharing",
-    "/Users/sarvex/Sources/ride-sharing-rust",
-    "/Users/sarvex/Sources/javascript-leetcode",
-    "/Users/sarvex/Sources/rust-leetcode",
-    "/Users/sarvex/Sources/go-leetcode",
-    "/Users/sarvex/Sources/comprehensive-rust",
-    "/Users/sarvex/Sources/erlang-leetcode",
-    "/Users/sarvex/Sources/example",
-    "/Users/sarvex/Sources/presale-dapp-second",
-    "/Users/sarvex/Sources/crossplane-tutorial",
-    "/Users/sarvex/Sources/http-server"
-  ],
-  "snyk.yesWelcomeNotification": false,
   "sonarlint.connectedMode.connections.sonarcloud": [
     {
       "connectionId": "sarvex",
