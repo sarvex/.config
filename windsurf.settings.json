@@ -154,11 +154,7 @@
   },
   "git.autofetch": true,
   "git.autoStash": true,
-  "git.branchRandomName.dictionary": [
-    "adjectives",
-    "animals",
-    "colors"
-  ],
+  "git.branchRandomName.dictionary": ["adjectives", "animals", "colors"],
   "git.branchRandomName.enable": true,
   "git.confirmSync": false,
   "git.detectSubmodulesLimit": 32,
@@ -182,11 +178,7 @@
   "peacock.showColorInStatusBar": false,
   "peacock.surpriseMeOnStartup": true,
   "prettier.bracketSameLine": true,
-  "prettier.documentSelectors": [
-    "**/*.astro",
-    "**/*.vue",
-    "**/*.svelte"
-  ],
+  "prettier.documentSelectors": ["**/*.astro", "**/*.vue", "**/*.svelte"],
   "prettier.jsxSingleQuote": true,
   "prettier.prettierPath": "~/Library/pnpm/global/5/node_modules/prettier",
   "prettier.printWidth": 120,
@@ -246,6 +238,8 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
   "window.density.editorTabHeight": "compact",
   "window.restoreFullscreen": true,
+  "windsurf.marketplaceExtensionGalleryServiceURL": "https://marketplace.visualstudio.com/_apis/public/gallery",
+  "windsurf.marketplaceGalleryItemURL": "https://marketplace.visualstudio.com/items",
   "workbench.activityBar.location": "top",
   "workbench.colorTheme": "SynthWave84",
   "workbench.commandPalette.experimental.suggestCommands": true,
