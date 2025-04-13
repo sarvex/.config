@@ -51,19 +51,23 @@ if wezterm.config_builder then
   config = wezterm.config_builder()
 end
 
--- This is where you actually apply your config choices
 config = {
-  font = wezterm.font('Delugia', { weight = 'DemiLight' }),
-  window_background_opacity = 0.7,
-  use_fancy_tab_bar = true,
-  hide_tab_bar_if_only_one_tab = true,
-  check_for_updates = true,
-  color_scheme = "AdventureTime",
-  tab_bar_at_bottom = true,
-  font_size = 11.0,
-  launch_menu = launch_menu,
-  default_prog = { "pwsh.exe", "-NoLogo" },
-  -- default_prog = { "nu.exe" },
+	--	font = wezterm.font("Delugia", { weight = "DemiLight" }),
+	initial_rows = 35,
+	initial_cols = 99,
+	window_background_opacity = 0.8,
+	window_decorations = "RESIZE",
+	use_fancy_tab_bar = true,
+	hide_tab_bar_if_only_one_tab = true,
+	check_for_updates = true,
+	color_scheme = "AdventureTime",
+	tab_bar_at_bottom = true,
+	font_size = 12.0,
+	launch_menu = launch_menu,
+	-- default_prog = { "pwsh.exe", "-NoLogo" },
+	-- default_prog = { "/usr/local/microsoft/powershell/7/pwsh.exe", "-NoLogo" },
+	-- default_prog = { "nu.exe" },
+	default_prog = { "/opt/homebrew/bin/nu" },
 }
 
 -- and finally, return the configuration to wezterm
