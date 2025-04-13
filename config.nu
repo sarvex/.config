@@ -50,13 +50,20 @@ $env.LDFLAGS = $"-L($pg_prefix)/lib"
 $env.CPPFLAGS = $"-I($pg_prefix)/include"
 $env.PKG_CONFIG_PATH = $"($pg_prefix)/lib/pkgconfig"
 
-
 # --- Aliases ---
 alias python = /usr/bin/python3
 # alias ls = 'ls --color'
 alias ls = eza --git --no-user --no-time
 alias ll = eza --long --all --git --no-user --no-time
 alias cat = bat --paging=never --theme=DarkNeon --style=plain
+
+if ($env | get SSH_CONNECTION | is-not-empty) {
+    let-env EDITOR = "vim"
+} else {
+    let-env EDITOR = "nvim"
+}
+let-env VISUAL = "subl"
+let-env HOME_EDITOR = "mate"
 
 alias fuck = thefuck $in
 source ~/.config/nushell/zoxide.nu
