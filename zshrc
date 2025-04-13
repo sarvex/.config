@@ -102,6 +102,8 @@ if [[ -n $SSH_CONNECTION ]]; then
 else
   export EDITOR='nvim'
 fi
+export VISUAL='subl'
+export HOME_EDITOR='mate'
 
 # Aliases
 # alias ls='ls --color'
