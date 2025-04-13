@@ -32,7 +32,11 @@ set -gx PKG_CONFIG_PATH (brew --prefix postgresql@17)/lib/pkgconfig
 set -gx AIDER_CONFIG ~/.config/aider/config.yml
 
 # Editors
-set -gx EDITOR nvim
+if test -n "$SSH_CONNECTION"
+    set -gx EDITOR vim
+else
+    set -gx EDITOR nvim
+end
 set -gx VISUAL subl
 set -gx HOME_EDITOR mate
 
