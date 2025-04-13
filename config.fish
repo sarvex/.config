@@ -31,6 +31,11 @@ set -gx PKG_CONFIG_PATH (brew --prefix postgresql@17)/lib/pkgconfig
 # Other configurations
 set -gx AIDER_CONFIG ~/.config/aider/config.yml
 
+# Editors
+set -gx EDITOR nvim
+set -gx VISUAL subl
+set -gx HOME_EDITOR mate
+
 # Aliases
 alias python="/usr/bin/eython3"
 # alias ls='ls --color'
