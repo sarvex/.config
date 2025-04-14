@@ -103,7 +103,7 @@ else
   export EDITOR='nvim'
 fi
 export VISUAL='subl'
-export HOME_EDITOR='mate'
+export HOMEBREW_EDITOR='mate'
 
 # Aliases
 # alias ls='ls --color'
@@ -111,8 +111,11 @@ alias ls='eza --git --no-user --no-time'
 alias ll='eza --long --all --git --no-user --no-time' 
 alias cat='bat --paging never --theme DarkNeon --style plain'
 
-# Shell integrations
-source <(zoxide init --cmd cd zsh)
-source <(fzf --zsh)
-source <(thefuck --alias)
-source <(starship init zsh)
+if [[ -o interactive ]]; then
+  # Shell integrations
+  source <(zoxide init --cmd cd zsh)
+  source <(fzf --zsh)
+  source <(thefuck --alias)
+  source <(starship init zsh)
+  fastfetch
+fi
