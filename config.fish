@@ -10,6 +10,7 @@ set -gx PATH (brew --prefix uutils-coreutils)/libexec/uubin \
   $HOME/.cargo/bin \
   (brew --prefix postgresql@17)/bin \
   $HOME/Library/Python/3.9/bin \
+  /usr/local/bin:/usr/bin:/bin:/opt/homebrew/bin:/usr/sbin:/opt/homebrew/sbin \
   $PATH
 
 # Development environment settings
