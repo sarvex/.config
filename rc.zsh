@@ -117,12 +117,12 @@ export CPPFLAGS="-I$(brew --prefix postgresql@17)/include"
 export PKG_CONFIG_PATH="$(brew --prefix postgresql@17)/lib/pkgconfig"
 
 # PATH modifications
-export PATH='$(brew --prefix uutils-coreutils)/libexec/uubin:$(brew --prefix uutils-diffutils)/libexec/uubin:$(brew --prefix uutils-findutils)/libexec/uubin:$(brew --prefix rustup)/bin:$HOME/.cargo/bin:$(brew --prefix postgresql@17)/bin:$HOME/Library/Python/3.9/bin:$PATH'
+export PATH="/usr/bin:/bin:/usr/sbin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/sarvex/.cargo/bin:/Users/sarvex/Library/Python/3.9/bin:$(brew --prefix uutils-coreutils)/libexec/uubin:$(brew --prefix uutils-diffutils)/libexec/uubin:$(brew --prefix uutils-findutils)/libexec/uubin:$(brew --prefix rustup)/bin:$HOME/.cargo/bin:$(brew --prefix postgresql@17)/bin:$PATH"
 
 # Aliases
 # alias ls='ls --color'
-alias ls='eza --git --no-user --no-time' 
-alias ll='eza --long --all --git --no-time' 
+alias ls='eza --git --no-user --no-time'
+alias ll='eza --long --all --git --no-time'
 alias cat='bat --paging never --theme DarkNeon --style plain'
 alias python='/usr/bin/python3'
 alias pip='/usr/bin/pip3'
