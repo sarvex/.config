@@ -1,21 +1,16 @@
-rew/bin/brew shellenv | source
-
-if status is-interactive
-    # Commands to run in interactive sessions can go here
-		thefuck --alias | source
-		fzf --fish | source
-		zoxide init fish | source
+if test -f /opt/homebrew/bin/brew
+  eval (/opt/homebrew/bin/brew shellenv)
 end
 
 # PATH modifications
 set -gx PATH (brew --prefix uutils-coreutils)/libexec/uubin \
-    (brew --prefix uutils-diffutils)/libexec/uubin \
-    (brew --prefix uutils-findutils)/libexec/uubin \
-    (brew --prefix rustup)/bin \
-    $HOME/.cargo/bin \
-    (brew --prefix postgresql@17)/bin \
-    $HOME/Library/Python/3.9/bin \
-    $PATH
+  (brew --prefix uutils-diffutils)/libexec/uubin \
+  (brew --prefix uutils-findutils)/libexec/uubin \
+  (brew --prefix rustup)/bin \
+  $HOME/.cargo/bin \
+  (brew --prefix postgresql@17)/bin \
+  $HOME/Library/Python/3.9/bin \
+  $PATH
 
 # Development environment settings
 set -gx LLVM_CONFIG (brew --prefix llvm)/bin/llvm-config
@@ -33,9 +28,9 @@ set -gx AIDER_CONFIG ~/.config/aider/config.yml
 
 # Editors
 if test -n "$SSH_CONNECTION"
-    set -gx EDITOR vim
+  set -gx EDITOR vim
 else
-    set -gx EDITOR nvim
+  set -gx EDITOR nvim
 end
 set -gx VISUAL subl
 set -gx HOME_EDITOR mate
@@ -46,3 +41,13 @@ alias python="/usr/bin/eython3"
 alias ls='eza --git --no-user --no-time' 
 alias ll='eza --long --all --git --no-user --no-time' 
 alias cat='bat --paging never --theme DarkNeon --style plain'
+alias python='/usr/bin/python3'
+alias pip='/usr/bin/pip3'
+
+if status is-interactive
+  # Commands to run in interactive sessions can go here
+  thefuck --alias | source
+  fzf --fish | source
+  zoxide init fish | source
+  fastfetch
+end
