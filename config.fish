@@ -37,10 +37,28 @@ set -gx VISUAL subl
 set -gx HOME_EDITOR mate
 
 # Aliases
-alias python="/usr/bin/eython3"
-# alias ls='ls --color'
-alias ls='eza --git --no-user --no-time' 
-alias ll='eza --long --all --git --no-user --no-time' 
+# Replace ls with eza
+alias ls='eza --color=always --group-directories-first --icons' # preferred listing
+alias la='eza -a --color=always --group-directories-first --icons'  # all files and dirs
+alias ll='eza -l --color=always --group-directories-first --icons'  # long format
+alias lla='eza -al --color=always --group-directories-first --icons'  # long format
+alias lt='eza -aT --color=always --group-directories-first --icons' # tree listing
+alias l.="eza -a | grep -e '^\.'"                                     # show only dotfiles
+alias tarnow='tar -acf '
+alias untar='tar -zxvf '
+alias wget='wget -c '
+alias psmem='ps auxf | sort -nr -k 4'
+alias psmem10='ps auxf | sort -nr -k 4 | head -10'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ......='cd ../../../../..'
+alias dir='dir --color=auto'
+alias vdir='vdir --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
 alias cat='bat --paging never --theme DarkNeon --style plain'
 alias python='/usr/bin/python3'
 alias pip='/usr/bin/pip3'
