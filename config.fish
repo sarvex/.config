@@ -24,8 +24,6 @@ set -gx RUSTC_WRAPPER sccache
 set -gx CC "sccache clang"
 set -gx CXX "sccache clang++"
 set -gx AIDER_CONFIG ~/.config/aider/config.yml
-set -gx OPENAI_API_KEY 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
-set -gx ANTHROPIC_API_KEY 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
 
 # PostgreSQL configuration
 set -gx LDFLAGS "-L"(brew --prefix postgresql@17)"/lib"
