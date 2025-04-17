@@ -2,6 +2,17 @@ if test -f /opt/homebrew/bin/brew
     eval (/opt/homebrew/bin/brew shellenv)
 end
 
+# Set Homebrew-related environment variables
+set -gx HOMEBREW_PREFIX "/opt/homebrew"
+set -gx HOMEBREW_CELLAR "/opt/homebrew/Cellar"
+set -gx HOMEBREW_REPOSITORY "/opt/homebrew"
+if not set -q MANPATH
+    set -gx MANPATH ""
+end
+set -gx MANPATH ":"(string trimleft --characters=: "$MANPATH")
+set -gx INFOPATH "/opt/homebrew/share/info:"$INFOPATH
+set -g fpath "/opt/homebrew/share/zsh/site-functions" $fpath
+
 # PATH modifications
 fish_add_path /opt/homebrew/bin
 fish_add_path /opt/homebrew/sbin
@@ -37,7 +48,7 @@ else
     set -gx EDITOR nvim
 end
 set -gx VISUAL subl
-set -gx HOMEBREW_EDITOR mate
+set -gx HOME_EDITOR mate
 
 # Aliases
 # Replace ls with eza
