@@ -1,0 +1,372 @@
+# SpaceVim options {{{
+[options]
+  # disabled_plugins = ["startify", 'deoplete-dictionary']
+  # enable_language_specific_leader = false
+  # vimcompatible = true
+  auto_disable_touchpad = false
+  automatic_update = true
+  buffer_index_type = 4
+  checkinstall = false
+  code_runner_focus = true
+  colorscheme = 'SpaceVim'
+  colorscheme_bg = 'dark'
+  commandline_prompt = '➭'
+  debug_level = 0
+  default_indent = 2
+  enable_cursorline = true
+  enable_filetree_gitstatus = true
+  enable_googlesuggest = true
+  enable_guicolors = true
+  enable_key_frequency = 1
+  enable_os_fileformat_icon = true
+  enable_statusline_bfpath = true
+  enable_statusline_tag = true
+  enable_tabline_filetype_icon = true
+  enable_tabline_ft_icon = true
+  filetree_direction = 'right'
+  github_username = 'sarvex'
+  guifont = 'Agave Nerd Font Mono:h12'
+  # guifont = 'DejaVuSansM Nerd Font Mono:h12'
+  # guifont = 'Hasklug Nerd Font Mono:h12'
+  # guifont = 'SauceCodePro Nerd Font Mono:h12'
+  home_files_number = 16
+  project_rooter_outermost = false
+  relativenumber = true
+  src_root = '~\Sources\'
+  statusline_iseparator = 'arrow'
+  statusline_separator = 'fire'
+  statusline_unicode_symbols = true
+  todo_labels = ['bug', 'question', 'fixme', 'todo']
+  todo_prefix = '@'
+  use_lua = true
+# }}}
+
+# SpaceVim layer config {{{
+[[layers]]
+  name = 'autocomplete'
+  auto_completion_return_key_behavior = 'smart'
+  auto_completion_tab_key_behavior = 'smart'
+
+[[layers]]
+  name = 'checkers'
+  lint_on_the_fly = true
+  lint_on_save = true
+
+[[layers]]
+  name = 'format'
+  format_on_save = true
+
+[[layers]]
+  name = 'edit'
+  autosave_timeout = 300000
+  enable_hop = true
+
+[[layers]]
+  name = 'core'
+  enable_filetree_gitstatus = true
+  enable_filetree_filetypeicon = true
+  filetree_show_hidden = true
+
+[[layers]]
+  name = 'ui'
+  cursorword_exclude_filetype = ['markdown']
+  enable_cursorword = true
+  enable_sidebar = true
+
+[[layers]]
+  name = 'telescope'
+
+[[layers]]
+  name = 'ctrlspace'
+
+[[layers]]
+  name = 'git'
+
+[[layers]]
+  name = 'github'
+
+[[layers]]
+  name = 'gtags'
+
+[[layers]]
+  name = 'lang#asciidoc'
+
+[[layers]]
+  name = 'lang#assembly'
+
+[[layers]]
+  name = 'lang#batch'
+
+[[layers]]
+  name = 'lang#c'
+  enable_clang_syntax_highlight = true
+
+[[layers]]
+  name = 'lang#clojure'
+
+[[layers]]
+  name = 'lang#cmake'
+
+[[layers]]
+  name = 'lang#crystal'
+
+[[layers]]
+  name = 'lang#csharp'
+
+[[layers]]
+  name = 'lang#d'
+
+[[layers]]
+  name = 'lang#dart'
+
+[[layers]]
+  name = 'lang#dockerfile'
+
+[[layers]]
+  name = 'lang#e'
+
+[[layers]]
+  name = 'lang#eiffel'
+
+[[layers]]
+  name = 'lang#elixir'
+
+[[layers]]
+  name = 'lang#elm'
+
+[[layers]]
+  name = 'lang#erlang'
+
+[[layers]]
+  name = 'lang#factor'
+
+[[layers]]
+  name = 'lang#fortran'
+
+[[layers]]
+  name = 'lang#fsharp'
+
+[[layers]]
+  name = 'lang#go'
+
+[[layers]]
+  name = 'lang#graphql'
+
+[[layers]]
+  name = 'lang#haskell'
+
+[[layers]]
+  name = 'lang#haxe'
+
+[[layers]]
+  name = 'lang#html'
+
+[[layers]]
+  name = 'lang#idris'
+
+[[layers]]
+  name = 'lang#io'
+
+[[layers]]
+  name = 'lang#ipynp'
+
+[[layers]]
+  name = 'lang#java'
+
+[[layers]]
+  name = 'lang#javascript'
+
+[[layers]]
+  name = 'lang#json'
+
+[[layers]]
+  name = 'lang#jsonnet'
+
+[[layers]]
+  name = 'lang#julia'
+
+[[layers]]
+  name = 'lang#kotlin'
+
+[[layers]]
+  name = 'lang#lisp'
+
+[[layers]]
+  name = 'lang#livescript'
+
+[[layers]]
+  name = 'lang#lua'
+
+[[layers]]
+  name = 'lang#markdown'
+
+[[layers]]
+  name = 'lang#nim'
+
+[[layers]]
+  name = 'lang#nix'
+
+[[layers]]
+  name = 'lang#ocaml'
+
+[[layers]]
+  name = 'lang#org'
+
+[[layers]]
+  name = 'lang#packt'
+
+[[layers]]
+  name = 'lang#pascal'
+
+[[layers]]
+  name = 'lang#perl'
+
+[[layers]]
+  name = 'lang#php'
+
+[[layers]]
+  name = 'lang#plantuml'
+
+[[layers]]
+  name = 'lang#pony'
+
+[[layers]]
+  name = 'lang#powershell'
+
+[[layers]]
+  name = 'lang#processing'
+
+[[layers]]
+  name = 'lang#prolog'
+
+[[layers]]
+  name = 'lang#python'
+
+[[layers]]
+  name = 'lang#r'
+
+[[layers]]
+  name = 'lang#racket'
+
+[[layers]]
+  name = 'lang#reason'
+
+[[layers]]
+  name = 'lang#red'
+
+[[layers]]
+  name = 'lang#rescript'
+
+[[layers]]
+  name = 'lang#ring'
+
+[[layers]]
+  name = 'lang#rst'
+
+[[layers]]
+  name = 'lang#ruby'
+
+[[layers]]
+  name = 'lang#rust'
+
+[[layers]]
+  name = 'lang#scheme'
+
+[[layers]]
+  name = 'lang#swift'
+
+[[layers]]
+  name = 'lang#teal'
+
+[[layers]]
+  name = 'lang#toml'
+
+[[layers]]
+  name = 'lang#typescript'
+
+[[layers]]
+  name = 'lang#v'
+
+[[layers]]
+  name = 'lang#vim'
+
+[[layers]]
+  name = 'lang#vue'
+
+[[layers]]
+  name = 'lang#xml'
+
+[[layers]]
+  name = 'lang#zig'
+
+[[layers]]
+  name = 'lsp'
+  filetypes = [
+    'astro',
+    'bash',
+    'c',
+    'cpp',
+    'crystal',
+    'css',
+    'dart',
+    'elm',
+    'go',
+    'html',
+    'java',
+    'javascript',
+    'javascriptreact',
+    'julia',
+    'lua',
+    'md',
+    'nim',
+    'php',
+    'purescript',
+    'python',
+    'reason',
+    'ruby',
+    'rust',
+    'svelte',
+    'typescript',
+    'typescriptreact',
+    'vim',
+    'vue',
+  ]
+
+[[layers]]
+  name = 'mail'
+
+[[layers]]
+  name = 'shell'
+  default_position = 'top'
+  default_height = 30
+
+[[layers]]
+  name = 'ssh'
+
+[[layers]]
+  name = 'sudo'
+
+[[layers]]
+  name = 'test'
+
+[[layers]]
+  name = 'treesitter'
+
+[[layers]]
+  name = 'tools'
+
+[[layers]]
+  name = 'tools#dash'
+
+[[layers]]
+  name = 'tools#zeal'
+
+[[layers]]
+  name = 'tools#zeal'
+
+[[layers]]
+  name = 'VersionControl'
+
+[[layers]]
+  name = 'zettelkasten'
+# }}}
