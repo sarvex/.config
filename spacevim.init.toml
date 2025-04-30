@@ -1,8 +1,5 @@
 # SpaceVim options {{{
 [options]
-  # disabled_plugins = ["startify", 'deoplete-dictionary']
-  # enable_language_specific_leader = false
-  # vimcompatible = true
   auto_disable_touchpad = false
   automatic_update = true
   buffer_index_type = 4
@@ -34,7 +31,7 @@
   relativenumber = true
   src_root = '~\Sources\'
   statusline_iseparator = 'arrow'
-  statusline_separator = 'fire'
+  statusline_separator = 'arrow'
   statusline_unicode_symbols = true
   todo_labels = ['bug', 'question', 'fixme', 'todo']
   todo_prefix = '@'
