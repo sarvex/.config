@@ -71,11 +71,11 @@ if status is-interactive
   thefuck --alias | source
   fzf --fish | source
   zoxide init fish | source
-  fastfetch
 end
 
 function fish_greeting
   fortune
+  fastfetch
 end
 
 # pnpm setup
