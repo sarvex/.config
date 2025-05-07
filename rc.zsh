@@ -21,24 +21,6 @@ zinit light-mode for \
 
 ### End of Zinit's installer chunk
 
-# pnpm
-export PNPM_HOME="/Users/sarvex/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-
-if [[ -f "/opt/homebrew/bin/brew" ]] then
-  eval "$(/opt/homebrew/bin/brew shellenv)"
-fi
-
-if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-  autoload -Uz compinit
-  compinit
-fi
-
 # Add in snippets
 zinit snippet OMZL::git.zsh
 zinit snippet OMZP::git
@@ -95,6 +77,45 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
+if [[ -f "/opt/homebrew/bin/brew" ]] then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+  autoload -Uz compinit
+  compinit
+fi
+
+# PATH modifications
+export PATH="$(brew --prefix openjdk)/bin:$PATH"
+export PATH="$(brew --prefix uutils-coreutils)/libexec/uubin:$PATH"
+export PATH="$(brew --prefix uutils-diffutils)/libexec/uubin:$PATH"
+export PATH="$(brew --prefix uutils-findutils)/libexec/uubin:$PATH"
+export PATH="$(brew --prefix rustup)/bin:$PATH"
+export PATH="$(brew --prefix postgresql@17)/bin:$PATH"
+export PATH="$HOME/Library/Python/3.9/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/bin:$PATH"
+export PATH="/bin:$PATH"
+export PATH="/usr/sbin:$PATH"
+export PATH="/sbin:$PATH"
+export PATH="/opt/homebrew/bin:$PATH"
+
+# Development environment settings
+export LLVM_CONFIG="$(brew --prefix llvm)/bin/llvm-config"
+export RUSTC_WRAPPER="sccache"
+export CC="sccache clang"
+export CXX="sccache clang++"
+export AIDER_CONFIG='$HOME/.config/aider/config.yml'
+
+# PostgreSQL configuration
+export LDFLAGS="-L$(brew --prefix postgresql@17)/lib"
+export PKG_CONFIG_PATH="$(brew --prefix postgresql@17)/lib/pkgconfig"
+export CPPFLAGS="-I$(brew --prefix postgresql@17)/include -I/$(brew --prefix openjdk)/include"
+export GROOVY_HOME="$(brew --prefix groovy)/libexec"
+
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
@@ -103,21 +124,12 @@ else
 fi
 export VISUAL='subl'
 export HOMEBREW_EDITOR='mate'
-export AIDER_CONFIG='$HOME/.config/aider/config.yml'
 
-# Development environment settings
-export LLVM_CONFIG="$(brew --prefix llvm)/bin/llvm-config"
-export RUSTC_WRAPPER="sccache"
-export CC="sccache clang"
-export CXX="sccache clang++"
-
-# PostgreSQL configuration
-export LDFLAGS="-L$(brew --prefix postgresql@17)/lib"
-export CPPFLAGS="-I$(brew --prefix postgresql@17)/include"
-export PKG_CONFIG_PATH="$(brew --prefix postgresql@17)/lib/pkgconfig"
-
-# PATH modifications
-export PATH="/usr/bin:/bin:/usr/sbin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/sarvex/.cargo/bin:/Users/sarvex/Library/Python/3.9/bin:$(brew --prefix uutils-coreutils)/libexec/uubin:$(brew --prefix uutils-diffutils)/libexec/uubin:$(brew --prefix uutils-findutils)/libexec/uubin:$(brew --prefix rustup)/bin:$HOME/.cargo/bin:$(brew --prefix postgresql@17)/bin:$PATH"
+alias python='/usr/bin/python3'
+alias pip='/usr/bin/pip3'
+alias gcc='/opt/homebrew/bin/gcc-14'
+alias g++='/opt/homebrew/bin/g++-14'
+alias cpp='/opt/homebrew/bin/cpp-14'
 
 # Aliases
 alias ls='eza --color=always --group-directories-first --icons'
@@ -126,9 +138,7 @@ alias ll='eza -l --color=always --group-directories-first --icons'
 alias lla='eza -al --color=always --group-directories-first --icons'
 alias lt='eza -aT --color=always --group-directories-first --icons'
 alias l.='eza -a | grep -e "^\."'
-alias cat='bat --paging never --theme DarkNeon --style plain'
-alias python='/usr/bin/python3'
-alias pip='/usr/bin/pip3'
+alias cat='bat --paging=never --theme=DarkNeon --style=plain'
 
 if [[ -o interactive ]]; then
   # Shell integrations
@@ -137,4 +147,23 @@ if [[ -o interactive ]]; then
   source <(thefuck --alias)
   source <(starship init zsh)
   fastfetch
+  fortune
 fi
+
+# pnpm
+export PNPM_HOME="/Users/sarvex/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+# Added by Windsurf
+export PATH="/Users/sarvex/.codeium/windsurf/bin:$PATH"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/sarvex/.lmstudio/bin"
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
