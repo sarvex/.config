@@ -2,6 +2,9 @@
   "[astro]": {
     "editor.defaultFormatter": "astro-build.astro-vscode"
   },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[lua]": {
     "editor.defaultFormatter": "sumneko.lua"
   },
@@ -18,7 +21,8 @@
   "cmake.configureOnOpen": true,
   "cmake.options.statusBarVisibility": "compact",
   "cSpell.userWords": [
-    "deque",
+    "actix",
+    "healthz",    "deque",
     "Errorf",
     "gcflags",
     "gofmt",
@@ -207,7 +211,7 @@
   "editor.insertSpaces": true,
   "editor.lineNumbers": "relative",
   "editor.linkedEditing": true,
-  "editor.minimap.autohide": true,
+  "editor.minimap.autohide": "mouseover",
   "editor.minimap.maxColumn": 100,
   "editor.parameterHints.cycle": true,
   "editor.semanticHighlighting.enabled": true,
@@ -349,11 +353,14 @@
   "git.rememberPostCommitCommand": true,
   "git.terminalGitEditor": true,
   "git.useCommitInputAsStashMessage": true,
+  "github.copilot.selectedCompletionModel": "",
   "github.gitProtocol": "ssh",
   "githubLocalActions.dockerDesktopPath": "/Applications/Docker.app",
   "gitlens.advanced.messages": {
     "suppressIntegrationRequestTimedOutWarning": true
   },
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
   "gitlens.codeLens.enabled": false,
   "gitlens.defaultGravatarsStyle": "retro",
   "gitlens.plusFeatures.enabled": false,
@@ -415,6 +422,7 @@
     "GitHub.vscode-pull-request-github"
   ],
   "remoteHub.commitDirectlyWarning": "off",
+  "rust-analyzer.lens.enable": false,
   "rust-analyzer.semanticHighlighting.operator.specialization.enable": true,
   "rust-analyzer.semanticHighlighting.punctuation.enable": true,
   "rust-analyzer.semanticHighlighting.punctuation.separate.macro.bang": true,
@@ -474,13 +482,14 @@
   "typescript.inlayHints.variableTypes.enabled": true,
   "typescript.suggest.completeFunctionCalls": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
+  "vscode-edge-devtools.webhintInstallNotification": true,
   "window.autoDetectColorScheme": true,
+  "window.commandCenter": true,
   "window.density.editorTabHeight": "compact",
   "window.restoreFullscreen": true,
   "windsurf.marketplaceExtensionGalleryServiceURL": "https://marketplace.visualstudio.com/_apis/public/gallery",
   "windsurf.marketplaceGalleryItemURL": "https://marketplace.visualstudio.com/items",
   "workbench.activityBar.location": "top",
-  "workbench.colorTheme": "SynthWave84",
   "workbench.commandPalette.experimental.suggestCommands": true,
   "workbench.commandPalette.history": 16,
   "workbench.editor.autoLockGroups": {
@@ -495,8 +504,11 @@
   "workbench.editor.splitInGroupLayout": "vertical",
   "workbench.editor.tabSizing": "fit",
   "workbench.enableExperiments": false,
+  "workbench.iconTheme": "ayu",
   "workbench.list.smoothScrolling": true,
   "workbench.preferredDarkColorTheme": "SynthWave84",
+  "workbench.preferredLightColorTheme": "Solarized Light",
+  "workbench.productIconTheme": "fluent-icons",
   "yaml.customTags": [
     "!And",
     "!And sequence",
@@ -527,5 +539,10 @@
     "!Split sequence"
   ],
   "yaml.format.printWidth": 100,
-  "yaml.format.singleQuote": true
+  "yaml.format.singleQuote": true,
+  "yaml.schemas": {
+    "file:///Users/sarvex/.vscode-insiders/extensions/continue.continue-1.3.12-darwin-arm64/config-yaml-schema.json": [
+      ".continue/**/*.yaml"
+    ]
+  }
 }
